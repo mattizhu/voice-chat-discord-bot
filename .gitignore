@@ -1,0 +1,7 @@
+.git
+assets
+data
+node_modules
+
+# Editor Directories
+.vscode

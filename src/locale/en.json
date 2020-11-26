@@ -1,0 +1,137 @@
+{
+    "commands": {
+        "_errors": {
+            "executionIneffective": "There was an error executing the command: `%s`\n%s"
+        },
+        "clear": {
+            "voiceDelete": {
+                "deleteChannelReason": "%s removed all vacant voice channels."
+            }
+        },
+        "credits": {
+            "embedMessage": {
+                "title": "%s Credits",
+                "description": "Thanks for adding me to your server! These are some awesome individuals who developed and contributed to the development of me:\n\n**Developer**\nDiscord: <@209966957385089024>\nGithub: https://www.github.com/mattizhu\n\n**Contributors**\nDiscord: <@213310816231882752>"
+            }
+        },
+        "help": {
+            "embedMessage": {
+                "title": "%s's Commands",
+                "description": "If you are having problems with this Discord bot, please contact either the administrators or developer of this bot:\n\n%sFor more information about this Discord bot, type `%scredit`"
+            }
+        },
+        "kick": {
+            "_errors": {
+                "incorrectChannel": "you must be in your voice channel to be able to kick!",
+                "invalidMember": "mention a member in the server to kick!",
+                "selfMember": "you cannot kick yourself from your own voice channel!",
+                "unknownMember": "this user isn't in your voice channel to kick!",
+                "unownedChannel": "you don't own this voice channel to be able to kick!"
+            },
+            "voiceKick": {
+                "kickMemberReason": "%s kicked %s from their voice channel."
+            }
+        },
+        "lock": {
+            "_errors": {
+                "incorrectChannel": "you must be in your voice channel to be able to lock!",
+                "unownedChannel": "you don't own this voice channel to be able to lock!"
+            },
+            "permissionOverwrites": {
+                "everyonelockReason": "%s has locked their voice channel.",
+                "userlockReason": "%s is locking their voice channel."
+            }
+        },
+        "meow": {
+            "success": ["Meow!", "*purrs*", "MEEOOOOWWW!"]
+        },
+        "setup": {
+            "_errors": {
+                "alreadySetup": "you have already setup your server!",
+                "commandIneffective": "Unable to setup. Try again or contact the developer if this persists.",
+                "reactionUnresponsive": "you didn't respond with a reaction."
+            },
+            "automatic": {
+                "embedMessage": {
+                    "title": "%s Setup Configuration",
+                    "description": "Thanks for adding me to your server! Before you start, I need to setup a few things. I can do two configurations:\n\n**🔮 Automatic Setup** *(Recommended)*\nThis will create a new channel category with the relevant channels so that your members can generate voice channels with ease. This will also have a text channel so that your members can manage their channels.\n\n**⚙️ Manual Setup**\nIf you already have a category setup with a text and voice channel, I can use them with this setup. I will ask for category and channel IDs so that I know which category you want me to control."
+                },
+                "success": {
+                    "embedMessage": {
+                        "title": "Automatic Setup Complete!",
+                        "description": "The automatic setup is now complete and everyone can use the channels to create and manage their own voice channels.\n\nIn case you lose any vital channels, you can type `%ssetuprepair` to repair the channels in question or to change channels."
+                    }
+                }
+            },
+            "manual": {
+                "embedMessage": {
+                    "title": "Manual Setup Unavailable",
+                    "description": "Sorry, %s, my developer hasn't coded me to complete this task. Please use my automatic setup instead.\n\nType `%ssetup` to setup again."
+                }
+            },
+            "embedMessage": {
+                "title": "%s Setup Configuration",
+                "description": "Thanks for adding me to your server! Before you start, I need to setup a few things. I can do two configurations:\n\n**🔮 Automatic Setup** *(Recommended)*\nThis will create a new channel category with the relevant channels so that your members can generate voice channels with ease. This will also have a text channel so that your members can manage their channels.\n\n**⚙️ Manual Setup**\nIf you already have a category setup with a text and voice channel, I can use them with this setup. I will ask for category and channel IDs so that I know which category you want me to control."
+            }
+        },
+        "unlock": {
+            "_errors": {
+                "incorrectChannel": "you must be in your voice channel to be able to unlock!",
+                "unownedChannel": "you don't own this voice channel to be able to unlock!"
+            },
+            "permissionOverwrites": {
+                "everyoneUnlockReason": "%s has unlocked their voice channel.",
+                "userUnlockReason": "%s is unlocking their voice channel."
+            }
+        }
+    },
+    "discord": {
+        "_errors": {
+            "channelCreateIneffective": "Unable to create channel: %s",
+            "channelDeleteIneffective": "Unable to delete channel: %s",
+            "channelFetchIneffective": "Unable to fetch a channel: %s",
+            "channelKickIneffective": "Unable to kick member from channel: %s",
+            "channelUpdateOverwriteIneffective": "Unable to update",
+            "messageIneffective": "Unable to send message in channel: %s",
+            "messageReactIneffective": "Unable to react to message in channel: %s"
+        },
+        "channels": {
+            "category": "Voice Channels",
+            "text": "commands",
+            "voice": "Create a channel",
+            "voiceUser": "%s's channel"
+        }
+    },
+    "events": {
+        "message": {
+            "_errors": {
+                "argumentsRequired": "you didn't provide any arguments! Check `%shelp` for more information on this command.",
+                "cooldownInsufficient": "please wait %s seconds before continuing to execute this command!",
+                "commandDisabled": "executing this command has been disabled!",
+                "commandUnknown": "I don't know this command! Try again or type `%shelp` for more information.",
+                "executionIneffective": "There was an error executing this command. Contact the developer if this persists.",
+                "permissionInsufficient": "you don't have the permission to execute this command!"
+            }
+        },
+        "ready": {
+            "activity": {
+                "name": ["@VoiceChatBot help", "@VoiceChatBot lock", "@VoiceChatBot unlock", "@VoiceChatBot kick", "@VoiceChatBot credit"],
+                "type": "PLAYING"
+            },
+            "success": "%s successfully listening to %s users!"
+        },
+        "voiceStateUpdate": {
+            "channelVoiceReason": "%s created a voice channel"
+        }
+    },
+    "nedb": {
+        "_errors": {
+            "guildsFindOneIneffective": "Unable to find guild in NeDB collection `guilds`: %s",
+            "guildsInsertIneffective": "Unable to insert guild(s) in NeDB collection `guilds`: %s",
+            "guildsRemoveIneffective": "Unable to remove guild(s) in NeDB collection `guilds`: %s",
+            "voiceChannelsFindOneIneffective": "Unable to find voice channel in NeDB collection `voiceChannels`: %s",
+            "voiceChannelsInsertIneffective": "Unable to insert voice channel(s) in NeDB collection `voiceChannels`: %s",
+            "voiceChannelsRemoveIneffective": "Unable to remove voice channel(s) in NeDB collection `voiceChannels`: %s"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "locale": "en"
+    },
+    "discord": {
+        "token": "YOUR DISCORD BOT TOKEN",
+        "prefix": "$",
+        "embedColor": "#38FEDC"
+    }
+}
