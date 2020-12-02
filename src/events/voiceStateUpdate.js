@@ -52,7 +52,7 @@ module.exports = (client, oldState, newState) => {
     // NeDB Guilds Query & Verification
     dbGuilds.findOne({id: newState.guild.id}, (error, Guild) => {
         if (error) return logger.error(intLang('nedb._errors.guildsFindOneIneffective', error));
-        if (!Guild && Guild.channels.category !== newState.channel.parent.id) return;
+        if (!Guild || Guild.channels.category !== newState.channel.parent.id) return;
 
         // Member joins "Create a channel" Voice Channel
         if (newState.channelID === Guild.channels.voice) {
