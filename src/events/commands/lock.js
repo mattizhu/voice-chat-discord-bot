@@ -14,8 +14,8 @@ module.exports = {
             if (error) return logger.error(intLang('nedb._errors.voiceChannelsFindOneIneffective', error));
 
             // Voice Channel Verification
-            if (!message.member.voice.channel || message.member.voice.channelID !== VoiceChannel.id) return message.reply(intLang('commands.lock._errors.incorrectChannel'));
-            if (!VoiceChannel || VoiceChannel.channelOwner !== message.author.id) return message.reply(intLang('commands.lock._errors.unownedChannel'));
+            if (!message.member.voice.channel || !VoiceChannel || message.member.voice.channelID !== VoiceChannel.id) return message.reply(intLang('commands.lock._errors.incorrectChannel'));
+            if (VoiceChannel.channelOwner !== message.author.id) return message.reply(intLang('commands.lock._errors.unownedChannel'));
 
             // Voice Channel Permission Overwrites
             await message.member.voice.channel.updateOverwrite(message.author.id, {CONNECT: true}, intLang('commands.lock.permissionOverwrites.userlockReason', message.author.tag))
