@@ -1,21 +1,20 @@
 {
-    "name": "voicechatbot",
-    "version": "0.1.0",
-    "description": "🔊 VoiceChatBot is a Discord bot that is developed to allow Discord communities to create and manage their own voice channels.",
-    "main": "./src/voicechatbot.js",
-    "scripts": {
-      "start": "node ./"
-    },
-    "engines": {
-      "node": ">=12.0.0"
-    },
-    "author": "Matthew Williams (mattwillcreative@gmail.com)",
-    "license": "MIT",
-    "dependencies": {
-      "@types/node": "^14.14.10",
-      "discord.js": "^12.5.0",
-      "mongoose": "^5.10.15",
-      "nedb": "^1.8.0",
-      "winston": "^3.3.3"
-    }
+  "name": "voicechatbot",
+  "version": "0.1.0",
+  "description": "🔊 VoiceChatBot is a Discord bot that is developed to allow Discord communities to create and manage their own voice channels.",
+  "main": "./src/voiceChatBot.js",
+  "scripts": {
+    "start": "node ./"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "author": "Matthew Williams (mattwillcreative@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^14.14.10",
+    "discord.js": "^12.5.0",
+    "nedb": "^1.8.0",
+    "winston": "^3.3.3"
   }
+}
