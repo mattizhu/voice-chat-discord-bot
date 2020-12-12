@@ -49,7 +49,8 @@
             "_errors": {
                 "alreadySetup": "you have already setup your server!",
                 "commandIneffective": "Unable to setup. Try again or contact the developer if this persists.",
-                "reactionUnresponsive": "you didn't respond with a reaction."
+                "reactionUnresponsive": "you didn't respond with a reaction.",
+                "responseTimeout": "you didn't response to my messages. Timed out."
             },
             "automatic": {
                 "embedMessage": {
@@ -64,9 +65,55 @@
                 }
             },
             "manual": {
-                "embedMessage": {
-                    "title": "Manual Setup Unavailable",
-                    "description": "Sorry, %s, my developer hasn't coded me to complete this task. Please use my automatic setup instead.\n\nType `%ssetup` to setup again."
+                "_errors": {
+                    "processCancelled": "I have cancelled the manual setup."
+                },
+                "categoryChannel": {
+                    "_errors": {
+                        "incorrectChannelType": ":x: %s, this is not a channel category! Try again.",
+                        "unknownChannel": ":x: %s, I cannot find the channel category with this ID! Try again."
+                    },
+                    "embedMessage": {
+                        "title": "(1/4) Setup - Channel Category",
+                        "description": "I need to know what channel category you want to setup for your members so I can create and manage their channels. I will also need a permanent voice channel in that channel category for members to join.\n\nPlease enter a category channel by entering the ID:\n\n*You can type `cancel` at any time to cancel the manual setup*"
+                    }
+                },
+                "voiceChannel": {
+                    "_errors": {
+                        "incorrectChannelCategory": ":x: %s, this is not inside the channel category you've assigned! Try again.",
+                        "incorrectChannelType": ":x: %s, this is not a voice channel! Try again.",
+                        "unknownChannel": ":x: %s, I cannot find the voice channel with this ID! Try again."
+                    },
+                    "embedMessage": {
+                        "title": "(2/4) Setup - Voice Channel",
+                        "description": "Alrighty! I got your channel category! I need a permanent voice channel to use for your members to join so they can create their voice channels. This must be inside the category you have setup.\n\nPlease enter a voice channel by entering the ID:"
+                    }
+                },
+                "textChannel": {
+                    "_errors": {
+                        "incorrectChannelCategory": ":x: %s, this is not inside the channel category you've assigned! Try again.",
+                        "incorrectChannelType": ":x: %s, this is not a text channel! Try again.",
+                        "unknownChannel": ":x: %s, I cannot find the text channel with this ID! Try again."
+                    },
+                    "embedMessage": {
+                        "title": "(3/4) Setup - Text Channel",
+                        "description": "Great! Now I need a permanent text channel inside your channel category so that your members can type bot commands to manage their own voice channels. This must be inside the category you have setup.\n\nPlease enter a text channel by entering the ID:"
+                    }
+                },
+                "permissions": {
+                    "_errors": {
+                        "permissionsUnset": ":x: %s, I cannot see the permissions I need to work! Make sure that I have the correct permissions."
+                    },
+                    "embedMessage": {
+                        "title": "(4/4) Setup - Permissions",
+                        "description": "Almost there! I have everything we need to get things setup. Before I finalise the setup, I need certain permissions inside the category channel to make it all work. Below are the permissions I need:\n\n- Manage Channels\n- Manage Permissions\n- View Channels\n- Send Messages\n- Add Reactions\n- Connect\n- Move Members\n\nMake sure that I have those permissions and react below:"
+                    }
+                },
+                "success": {
+                    "embedMessage": {
+                        "title": "Manual Setup Complete!",
+                        "description": "The manual setup is now complete and everyone can use the channels to create and manage their own voice channels.\n\nIn case you lose any vital channels, you can type `%ssetuprepair` to repair the channels in question or to change channels."
+                    }
                 }
             },
             "embedMessage": {
@@ -91,7 +138,7 @@
             "channelDeleteIneffective": "Unable to delete channel: %s",
             "channelFetchIneffective": "Unable to fetch a channel: %s",
             "channelKickIneffective": "Unable to kick member from channel: %s",
-            "channelUpdateOverwriteIneffective": "Unable to update",
+            "channelUpdateOverwriteIneffective": "Unable to update channel: %s",
             "messageIneffective": "Unable to send message in channel: %s",
             "messageReactIneffective": "Unable to react to message in channel: %s"
         },
