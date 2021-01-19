@@ -16,7 +16,7 @@ module.exports = {
             if (error) return logger.error(intLang('nedb._errors.guildFindOneIneffective', error));
 
             // Voice Channel Deletion
-            await message.guild.channels.cache.find(channel => channel.parentID === Guild.channels.category).each(channel => {
+            await message.guild.channels.cache.filter(channel => channel.parentID === Guild.channels.category).each(channel => {
                 channel.fetch()
                     .then(channel => {
                         if (channel.type !== 'voice' || channel.id === Guild.channels.voice || channel.members.array().length) return;
