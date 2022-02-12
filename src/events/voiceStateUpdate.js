@@ -36,7 +36,7 @@ module.exports = (client, oldState, newState) => {
         const channel = oldState.channel;
 
         // Voice Channel Verification
-        if (channel.parent.id !== Guild.channels.category || channel.id === Guild.channels.voice) return;
+        if (channel.parent == null || channel.parent.id !== Guild.channels.category || channel.id === Guild.channels.voice) return;
         if (channel.members.array().length) return;
 
         // NeDB VoiceChannels Removal
