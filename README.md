@@ -1,6 +1,6 @@
-# 🔊 VoiceChatBot Discord Bot
+![alt text](https://repository-images.githubusercontent.com/316337111/efa212f8-4971-45e1-9434-b461af002f93)
 
-> VoiceChatBot is a Discord bot that is developed to allow Discord communities to create and manage their own voice channels.
+VoiceChatBot is a Discord bot that is developed to allow Discord communities to create and manage their own voice channels.
 
 ## 📃 About
 Too many channels in your community for your members to join? VoiceChatBot eliminates countless unused voice channels and generates voice channels for your community when in need.
